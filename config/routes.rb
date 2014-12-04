@@ -1,4 +1,20 @@
 Rails.application.routes.draw do
+  resources :categories do
+    resources :photos
+  end
+
+  get 'static_pages/buy'
+
+  get 'static_pages/resume'
+
+  get 'static_pages/contact'
+
+
+
+  resources :videos
+
+  root 'welcome#index'
+  resources :articles
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
