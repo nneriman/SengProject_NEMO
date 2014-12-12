@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails SengProject_NEMO: development" uuid="db9973ee-8cd8-480b-94ed-4d4e63711d6d">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails SengProject_NEMO: test" uuid="a5848ea7-bbea-4fd4-8641-77611391b03a">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails SengProject_NEMO: cucumber" uuid="8310f8f0-244c-40e4-992c-c5dbda35ee37">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>
