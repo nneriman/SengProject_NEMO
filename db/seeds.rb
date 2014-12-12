@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Article.create({:title => "Bokeh (Bulanık) Fotoğraf Ç", :content => "", :post_time => Time.now})
+Article.create({:title => "Bokeh (Bulanık) Fotoğraf Çekimi", :content => "", :post_time => Time.now})
 Article.create({:title => "Bayramda Fotoğraf - II", :content => "", :post_time => Time.now})
 Article.create({:title => "Seyahat Fotoğrafçılığı", :content => "", :post_time => Time.now})
 Article.create({:title => "Fotoğraf Akımları", :content => "", :post_time => Time.now})
@@ -22,3 +22,6 @@ Article.create({:title => "Kritik An Fotoğrafçılığı", :content => "", :pos
 Article.create({:title => "Ölçüm Modları", :content => "", :post_time => Time.now})
 Article.create({:title => "Bu Fotoğraf Neden Güzel?", :content => "", :post_time => Time.now})
 Article.create({:title => "Silüet Fotoğrafları", :content => "", :post_time => Time.now})
+
+Photo.create({:title => "", :post_time => })
+
