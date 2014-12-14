@@ -1,0 +1,26 @@
+<%= render :partial => "common/header" %>
+
+
+
+<table align="center" style="margin-top: 30px;" id="categoryTable">
+
+  <tr>
+    <% i=1 %>
+    <% @categories.each do |category| %>
+
+        <td style="padding-left: 20px;padding-bottom: 20px;">
+
+          <a href="/categories/<%= category.id %>">
+            <img height="200px;" alt="" src="/assets/categories/<%= category.id %>.jpg" /></a>
+          <p><a href="/categories/<%= category.id %>"><%= category.title %></a></p>
+        </td>
+
+        <% if i % 4 == 0 %>
+            </tr>
+            <tr>
+        <% end %>
+        <% i += 1 %>
+    <% end %>
+    </tr>
+
+    </table>

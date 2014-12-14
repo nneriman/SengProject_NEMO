@@ -1,0 +1,19 @@
+<%= render :partial => "common/header" %>
+
+<p id="notice"><%= notice %></p>
+<div style="margin-top: 30px;text-align: center;">
+<h3>
+  <strong><%= @article.title %></strong>
+</h3>
+
+<p>
+  <img src="/assets/articles/<%= @article.id%>.jpg" width="1200px;" height="auto">
+</p>
+
+<p>
+<i>Bu makale <%= @article.post_time %> tarihinde eklenmiştir.</i>
+
+</p>
+  <%= link_to 'Back', articles_path %>
+
+</div>

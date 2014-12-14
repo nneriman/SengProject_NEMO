@@ -1,0 +1,50 @@
+<style>
+    .box {
+        width:300px;
+        height:300px;
+        position:fixed;
+        margin-left:-150px; /* half of width */
+        margin-top:-150px;  /* half of height */
+        top:50%;
+        left:50%;
+    }
+</style>
+
+<table class="box" align="center" width="500px" top="300px">
+
+  <tr><td><h1 style="color:powderblue">Fotoğraf Ekle</h1>
+    <%= form_for(@photo) do |f| %>
+        <% if @photo.errors.any? %>
+
+            <div id="error_explanation">
+              <h2><%= pluralize(@photo.errors.count, "error") %> prohibited this photo from being saved:</h2>
+
+              <ul>
+                <% @photo.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+        <% end %></td></tr>
+
+        <tr><td>
+          <div class="field">
+
+            <%= f.label "Başlık" %><br>
+            <%= f.text_field :title %>
+          </div></td></tr>
+        <tr><td><div class="field">
+          <%= f.label "Kategori" %><br>
+          <%= collection_select(:photo,:category_id,Category.all,:id,:title) %>
+
+        </div></td></tr>
+
+        <tr><td><div class="field">
+          <%= f.label "Resim yükle" %>
+          <%= f.file_field :picture %>
+        </div></td></tr>
+        <tr><td><div class="actions">
+          <%= f.submit %>
+        </div></td></tr>
+        </table>
+    <% end %>

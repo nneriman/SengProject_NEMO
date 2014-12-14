@@ -1,0 +1,50 @@
+<style>
+    body {
+        background: url('assets/bck.jpg') no-repeat center center fixed;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    .box {
+        width:300px;
+        height:300px;
+        position:fixed;
+        margin-left:-150px; /* half of width */
+        margin-top:-150px;  /* half of height */
+        top:30%;
+        left:50%;
+    }
+</style>
+<%flash.now[:alert]%>
+<body>
+<table class="box" align="center" width="500px" top="300px"><tr>
+  <td>
+    <div style="float:left">
+      <img alt="header" src="/assets/admin.jpg" style="float:left;" width="70px" height="60px"/>
+    </div></td>
+  <td>
+    <div>
+      <h2>Yönetici Girişi</h2>
+    </div></td>
+</tr>
+  <hr>
+  <%= form_tag author_sessions_path, method: :post do %>
+      <tr><td><div class="field">
+        <%= label_tag :email %></td>
+        <td><%= text_field_tag :email %>
+          <br/></td></tr>
+      </div>
+      <tr><td> <div class="field">
+        <%= label_tag :password %></td>
+        <td><%= password_field_tag :password %>
+          <br/></td></tr>
+      </div><tr><td></td></tr>
+      <div class="actions">
+        <tr><td></td><td> <%= submit_tag "Login" %>
+      </div> </td></tr>
+  <% end %>
+
+</table>
+</body>

@@ -1,18 +1,29 @@
 Rails.application.routes.draw do
+  get 'static_pages/admin_add'
+
   resources :categories do
     resources :photos
   end
 
+  SengProjectNemo::Application.routes.draw do
+  get 'static_pages/admin_add'
+
+    # ... other resources we have defined ...
+    resources :authors
+  end
+
+  resources :author_sessions, only: [ :new, :create, :destroy ]
+
+  get 'login'  => 'author_sessions#new'
+  get 'logout' => 'author_sessions#destroy'
   get 'static_pages/buy'
-
   get 'static_pages/resume'
-
   get 'static_pages/contact'
-
-
-
+  get 'static_pages/adminhome'
+  get 'static_pages/photo_list'
+  get 'static_pages/article_list'
   resources :videos
-
+resources :photos
   root 'welcome#index'
   resources :articles
   # The priority is based upon order of creation: first created -> highest priority.

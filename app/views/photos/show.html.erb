@@ -1,0 +1,40 @@
+<%= render :partial => "common/header" %>
+<p id="notice"><%= notice %></p>
+
+<table align="center" style="margin-top: 30px;" >
+
+  <tr>
+    <% i=1 %>
+    <% @photo.each do |photo| %>
+
+        <td style="padding-left: 20px;padding-bottom: 20px;">
+          <img alt="" src="/assets/<%= photo.id %>.png" />
+        </td>
+
+        <% if i % 4 == 0 %>
+            </tr>
+            <tr>
+        <% end %>
+        <% i += 1 %>
+    <% end %>
+    </tr>
+
+    </table>
+
+<p>
+  <strong>Title:</strong>
+  <%= @photo.title %>
+</p>
+
+<p>
+  <strong>Post time:</strong>
+  <%= @photo.post_time %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @photo.description %>
+</p>
+
+<%= link_to 'Edit', edit_photo_path(@photo) %> |
+<%= link_to 'Back', photos_path %>

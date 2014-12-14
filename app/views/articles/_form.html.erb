@@ -1,0 +1,59 @@
+<style>
+    .box {
+        width:250px;
+        height:250px;
+        position:fixed;
+        margin-left:-150px; /* half of width */
+        margin-top:-150px;  /* half of height */
+        top:50%;
+        left:50%;
+    }
+</style>
+<div style="border: 2px solid;border-radius: 25px;">
+<table class="box" align="center" width="500px" top="300px">
+  <tr>
+    <td>
+    <h1 style="color:powderblue">Makale Ekle</h1>
+    <%= form_for(@article) do |f| %>
+        <% if @article.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:</h2>
+
+              <ul>
+                <% @article.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+        <% end %>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+        <div class="field">
+            <%= f.label "Başlık" %><br>
+            <%= f.text_field :title %>
+        </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <div class="field">
+          <%= f.label "Yazı yükle" %>
+          <%= f.file_field :article %>
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <div class="actions">
+          <%= f.submit %>
+      </div>
+    </td>
+  </tr>
+    <% end %>
+</table>
+</div>
