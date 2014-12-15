@@ -1,5 +1,5 @@
 Feature: As an admin
-  I want to add a newspaper article
+  I want to add an article
   So that I can share my experience
 
   Background:
@@ -9,4 +9,3 @@ Feature: As an admin
     Given I am on article upload page
     When I upload a valid article with title "Test"
     Then I should see "Success"
-    And I should see "Test"

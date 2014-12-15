@@ -3,5 +3,7 @@ Feature:As an admin
   So that I can reach my admin panel
 
   Scenario: Show admin panel
-    Given I am logged in as an admin
-    Then I should see an error for "Invalid username or password"
+    Given I am on the login page
+    When I write email "email" and password "password"
+    And I should click button
+    Then I should be on the admin panel page
