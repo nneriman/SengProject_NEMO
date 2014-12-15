@@ -1,32 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-
   <component name="DataSourceManagerImpl" format="xml" hash="781711514">
     <data-source source="LOCAL" name="Rails SengProject_NEMO: development" uuid="42a01fd0-bd6f-4c16-84f0-b3e5b4e8c3fd">
-<!--=======
-  <component name="DataSourceManagerImpl" format="xml" hash="1611225646">
-    <data-source source="LOCAL" name="Rails SengProject_NEMO: development" uuid="db9973ee-8cd8-480b-94ed-4d4e63711d6d">
->>>>>>> a89f6b7d64306e2a8856148c83d5fa9d47727bfd-->
       <driver-ref>sqlite.xerial</driver-ref>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/development.sqlite3</jdbc-url>
       <libraries />
     </data-source>
-
     <data-source source="LOCAL" name="Rails SengProject_NEMO: test" uuid="916ae0c4-7712-4f8b-8dfe-86c7bce3ae21">
-<!--=======
-    <data-source source="LOCAL" name="Rails SengProject_NEMO: test" uuid="a5848ea7-bbea-4fd4-8641-77611391b03a">
->>>>>>> a89f6b7d64306e2a8856148c83d5fa9d47727bf-->
       <driver-ref>sqlite.xerial</driver-ref>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/test.sqlite3</jdbc-url>
       <libraries />
     </data-source>
-
     <data-source source="LOCAL" name="Rails SengProject_NEMO: cucumber" uuid="c00b25e8-084e-4b00-a5ef-8b4e32226015">
-<!--=======
-    <data-source source="LOCAL" name="Rails SengProject_NEMO: cucumber" uuid="8310f8f0-244c-40e4-992c-c5dbda35ee37">
->>>>>>> a89f6b7d64306e2a8856148c83d5fa9d47727bf-->
       <driver-ref>sqlite.xerial</driver-ref>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/test.sqlite3</jdbc-url>
